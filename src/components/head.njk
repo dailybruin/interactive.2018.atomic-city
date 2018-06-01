@@ -3,15 +3,24 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta property="og:url" content="http://features.dailybruin.com/2018/atomic-city/{{ page_article.slug }}" />
+  <meta property="og:url" content="https://features.dailybruin.com/2018/atomic-city/{{ page_article.slug }}" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="{{ page_article.short_title }} | Atomic City | Daily Bruin" />
   <meta name="twitter:card" content="summary_large_image">
-  <meta property="og:description" content="" />
-  <meta property="og:image" content="" />
+  <meta property="og:description" content="The contract for the Los Alamos National Laboratory expired in 2017, and the UC, which has been involved in the management of the lab since its inception in varying capacities, has again bid to manage the lab." />
+  
+  {% if page_article.slug === "./" %}
+    <meta property="og:image" content="" />
+  {% elif page_article.slug === "./wasted-energy" %}
+    <meta property="og:image" content="https://assets.dailybruin.com/images/enterprise.lanl/enterprise.news.plutonium.illo-a4cd6c02bf2186e201c355c82babc012.png" />
+  {% elif page_article.slug === "./assessing-risk" %}
+    <meta property="og:image" content="https://assets.dailybruin.com/images/enterprise.lanl/enterprise.lanl.opinion-911f31ca1b32f369dcdea0ca4ee6fe1e.png" />
+  {% elif page_article.slug === "./one-lab-one-community" %}
+    <meta property="og:image" content="https://assets.dailybruin.com/images/enterprise.lanl/web.enterprise.KH-afb261ab2e9969478a648a77997b9ee6.jpg" />
+  {% endif %}
 
   <title>{{ page_article.short_title }} | Atomic City | Daily Bruin</title>
-  <meta name="description" content="">
+  <meta name="description" content="The contract for the Los Alamos National Laboratory expired in 2017, and the UC, which has been involved in the management of the lab since its inception in varying capacities, has again bid to manage the lab.">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.css" />
   <link href="https://fonts.googleapis.com/css?family=Karla|Lora|Passion+One:400,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -19,4 +28,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/js/foundation.js"></script>
   <script src="script.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-28181852-25"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-28181852-25');
+  </script>
 </head>

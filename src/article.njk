@@ -23,6 +23,9 @@
       <p>{{ graf.value }}</p>
     {% elif graf.type === 'image' %}
       <img src="{{ images.s3[graf.value].url }}" alt="">
+      {% if images.s3[graf.value].hash === 'afb261ab2e9969478a648a77997b9ee6' or images.s3[graf.value].hash === 'e14597af818a6fa15025b883600a17c4' %}
+        <div class="video-credit">Kristie-Valerie Hoang/Daily Bruin</div>
+      {% endif %}
     {% endif %}
   {% endfor %}
 
