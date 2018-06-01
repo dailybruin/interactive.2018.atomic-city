@@ -39,7 +39,7 @@ export async function getData() {
   const res = await request.get(
     'https://kerckhoff.dailybruin.com/api/packages/flatpages/enterprise.lanl/'
   );
-  return JSON.parse(res).data['data.aml'];
+  return JSON.parse(res);
 }
 
 export function nunjucks(production = false) {

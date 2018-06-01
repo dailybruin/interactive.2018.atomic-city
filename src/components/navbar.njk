@@ -1,6 +1,6 @@
 <nav class="navbar" id="myNavbar">
   <a href="#" id="menu">MENU</a>
-  {% for article in articles %}
+  {% for article in data['data.aml'].articles %}
     <a href="{{ article.slug }}"
       {% if article === page_article %}
         class="active"
