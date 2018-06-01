@@ -4,8 +4,11 @@
   </div>
 {% elif page_article.leading !== '' %}
   <img src="{{ images.s3[page_article.leading].url }}" alt="">
+  {% if page_article.leading === 'enterprise.news.plutonium.illo.png' %}
+    <div class="video-credit">Jae Su/Daily Bruin</div>
+  {% endif %}
 {% endif %}
 
 <div class="main-title">Atomic City</div>
-<div class="main-sub">The contract for the Los Alamos National Laboratory expired in 2017, and the UC, which has been involved in the management of the lab since its inception in varying capacities, has again bid to manage the lab.</div>
+<div class="main-sub">The current contract for the Los Alamos National Laboratory expires in September 2018, and the UC, which has been involved in the management of the lab since its inception in varying capacities, submitted a bid last year to manage the lab.</div>
 <hr class="divider">
