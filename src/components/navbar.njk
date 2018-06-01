@@ -1,10 +1,14 @@
 <nav class="navbar" id="myNavbar">
   <a href="#" id="menu">MENU</a>
-  <a href="index.html" class="active">ASU</a>
-  <a href="curlz.html">CAMPUS CURLZ</a>
-  <a href="breakdown.html">BREAKDOWN</a>
-  <a href="responsibility.html">RACE & RESPONSIBILITY</a>
-  <a href="fighting.html">FIGHTING FOR CARE</a>
-  <a href="shock.html">COLOR SHOCK</a>
+  {% for article in articles %}
+    <a href="{{ article.slug }}"
+      {% if article === page_article %}
+        class="active"
+      {% endif %}
+    >
+      {{ article.short_title }}
+    </a>
+
+  {% endfor %}
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 </nav>

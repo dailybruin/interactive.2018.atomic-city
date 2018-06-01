@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include "components/head.njk" %}
+
+<!-- Atomic City -->
+
+<body>
+
+<article class="article-text">
+
+  {% include "components/header-video.njk" %}
+
+  <div id="header-text">{{ page_article.headline }}</div>
+  <div id="author-text">
+      By {{ page_article.author }}
+  </div>
+
+  {% for graf in page_article.grafs %}
+    <p>{{ graf.value }}</p>
+  {% endfor %}
+
+</article>
+
+{% include "components/navbar.njk" %}
+{% include "components/footer.njk" %}
+
+</body>
+</html>
