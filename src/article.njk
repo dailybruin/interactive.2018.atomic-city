@@ -7,6 +7,8 @@
 
 <body>
 
+<a href="http://dailybruin.com"><img id="db-refer" width="50px" src="http://dailybruin.com/images/2017/03/db-logo.png"></a>
+
 <article class="article-text">
 
   {% include "components/header-video.njk" %}
@@ -17,7 +19,11 @@
   </div>
 
   {% for graf in page_article.grafs %}
-    <p>{{ graf.value }}</p>
+    {% if graf.type === 'text' %}
+      <p>{{ graf.value }}</p>
+    {% elif graf.type === 'image' %}
+      <img src="" alt="">
+    {% endif %}
   {% endfor %}
 
 </article>
