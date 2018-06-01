@@ -4,7 +4,7 @@ import del from 'del';
 
 // HTML
 import nunjucksRender from 'gulp-nunjucks-render';
-import fetch from 'node-fetch';
+import request from 'request-promise-native';
 import data from 'gulp-data';
 
 // Styling related packages
@@ -36,12 +36,10 @@ export function clean() {
 }
 
 export async function getData() {
-  // const res = await fetch(
-  //   'https://kerckhoff.dailybruin.com/api/packages/flatpages/enterprise.lanl/'
-  // );
-  const res = require('./data.json');
-  console.log(res);
-  return res;
+  const res = await request.get(
+    'https://kerckhoff.dailybruin.com/api/packages/flatpages/enterprise.lanl/'
+  );
+  return JSON.parse(res).data['data.aml'];
 }
 
 export function nunjucks(production = false) {
