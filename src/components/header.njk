@@ -1,4 +1,11 @@
-<img src="img/header.jpg">
+{% if page_article.leading === 'video' %}
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/hIDw16KD2RU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+{% elif page_article.leading !== '' %}
+  <img src="{{ images.s3[page_article.leading].url }}" alt="">
+{% endif %}
+
 <div class="main-title">Atomic City</div>
 <div class="main-sub">The contract for the Los Alamos National Laboratory expired in 2017, and the UC, which has been involved in the management of the lab since its inception in varying capacities, has again bid to manage the lab.</div>
 <hr class="divider">

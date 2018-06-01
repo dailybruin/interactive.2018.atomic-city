@@ -11,7 +11,7 @@
 
 <article class="article-text">
 
-  {% include "components/header-video.njk" %}
+  {% include "components/header.njk" %}
 
   <div id="header-text">{{ page_article.headline }}</div>
   <div id="author-text">
@@ -22,7 +22,7 @@
     {% if graf.type === 'text' %}
       <p>{{ graf.value }}</p>
     {% elif graf.type === 'image' %}
-      <img src="" alt="">
+      <img src="{{ images.s3[graf.value].url }}" alt="">
     {% endif %}
   {% endfor %}
 
