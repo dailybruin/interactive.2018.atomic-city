@@ -3,19 +3,19 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta property="og:url" content="https://features.dailybruin.com/2018/atomic-city/{{ page_article.slug }}" />
+  <meta property="og:url" content="https://features.dailybruin.com/2018/atomic-city{{ page_article.slug }}" />
   <meta property="og:type" content="article" />
   <meta property="og:title" content="{{ page_article.short_title }} | Atomic City | Daily Bruin" />
   <meta name="twitter:card" content="summary_large_image">
   <meta property="og:description" content="The contract for the Los Alamos National Laboratory expired in 2017, and the UC, which has been involved in the management of the lab since its inception in varying capacities, has again bid to manage the lab." />
 
-  {% if page_article.slug === "./" %}
+  {% if page_article.slug === "/index.html" %}
     <meta property="og:image" content="https://assets.dailybruin.com/images/enterprise.lanl/Enterprise social-6ea8f16af2a13555d8790cecfd5230c5.jpg" />
-  {% elif page_article.slug === "./wasted-energy" %}
+  {% elif page_article.slug === "/wasted-energy.html" %}
     <meta property="og:image" content="https://assets.dailybruin.com/images/enterprise.lanl/enterprise.news.plutonium.illo-a4cd6c02bf2186e201c355c82babc012.png" />
-  {% elif page_article.slug === "./assessing-risk" %}
+  {% elif page_article.slug === "/assessing-risk.html" %}
     <meta property="og:image" content="https://assets.dailybruin.com/images/enterprise.lanl/enterprise.lanl.opinion-911f31ca1b32f369dcdea0ca4ee6fe1e.png" />
-  {% elif page_article.slug === "./one-lab-one-community" %}
+  {% elif page_article.slug === "/one-lab-one-community.html" %}
     <meta property="og:image" content="https://assets.dailybruin.com/images/enterprise.lanl/web.enterprise.KH-afb261ab2e9969478a648a77997b9ee6.jpg" />
   {% endif %}
 
