@@ -46,7 +46,14 @@ export function nunjucks(production = false) {
   const compiledNunjucks = gulp
     .src('src/*.njk')
     .pipe(data(getData()))
-    .pipe(nunjucksRender({ path: ['src/'] }));
+    .pipe(
+      nunjucksRender({
+        path: ['src/'],
+        envOptions: {
+          autoescape: false,
+        },
+      })
+    );
 
   // if (production) {
   //   return compiledNunjucks.pipe(gulp.dest('dist'));
